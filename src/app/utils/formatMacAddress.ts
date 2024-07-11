@@ -19,10 +19,14 @@ export const formatMacAddress = (value: string): string => {
   // Check if it's a standard MAC address (6 bytes) or an IPoIB MAC address (20 bytes)
   if (hexValues.length === 12) {
     // Standard MAC address
-    return hexValues.replace(/([0-9A-Fa-f]{2})(?=(?:[0-9A-Fa-f]{2})+(?!$))/g, "$1:").substring(0, 17);
+    return hexValues
+      .replace(/([0-9A-Fa-f]{2})(?=(?:[0-9A-Fa-f]{2})+(?!$))/g, "$1:")
+      .substring(0, 17);
   } else if (hexValues.length === 40) {
     // IPoIB MAC address
-    return hexValues.replace(/([0-9A-Fa-f]{2})(?=(?:[0-9A-Fa-f]{2})+(?!$))/g, "$1:").substring(0, 59);
+    return hexValues
+      .replace(/([0-9A-Fa-f]{2})(?=(?:[0-9A-Fa-f]{2})+(?!$))/g, "$1:")
+      .substring(0, 59);
   }
 
   // If not matching the lengths, return standard MAC address
