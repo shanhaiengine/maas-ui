@@ -86,7 +86,7 @@ const NavigationBanner = ({
             </svg>
           </div>
           <div className="p-panel__logo-name is-fading-when-collapsed ">
-            KUPENG
+            KUNPENG
           </div>
         </div>
       </Link>

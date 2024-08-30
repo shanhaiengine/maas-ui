@@ -1,5 +1,3 @@
-import { Button } from "@canonical/react-components";
-
 import { useUsabilla } from "app/base/hooks";
 
 export const Footer = (): JSX.Element => {
@@ -15,10 +13,10 @@ export const Footer = (): JSX.Element => {
                 className="p-footer__link"
                 href={`${process.env.REACT_APP_BASENAME}/docs/`}
               >
-                Local documentation
+                帮助文档
               </a>
             </li>
-            <li className="p-inline-list__item">
+            {/* <li className="p-inline-list__item">
               <a className="p-footer__link" href="https://www.ubuntu.com/legal">
                 Legal information
               </a>
@@ -33,11 +31,14 @@ export const Footer = (): JSX.Element => {
                   Give feedback
                 </Button>
               </li>
-            ) : null}
+            ) : null} */}
           </ul>
-          <p className="u-remove-max-width">
+          {/* <p className="u-remove-max-width">
             &copy; {new Date().getFullYear()} Canonical Ltd. Ubuntu and
             Canonical are registered trademarks of Canonical Ltd.
+          </p> */}
+          <p className="u-remove-max-width">
+            © {new Date().getFullYear()} 悦科数据科技有限公司
           </p>
         </div>
         <div className="col-small-1 col-medium-1 col-2">
